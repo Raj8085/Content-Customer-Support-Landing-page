@@ -104,14 +104,23 @@ function ContentConsumer() {
   return (
     <div className="flex flex-col min-h-screen">
 
-<header className="w-full bg-blue-700 text-white py-16">
+<header className="relative w-full py-16">
+<div className="absolute inset-0">
+    <img
+      src="/contentImage.jpg"
+      alt="Technology and Cybersecurity Support"
+      className="w-full h-full object-cover opacity-50"
+    />
+  </div>
+  
   <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center">
     {/* Content Section */}
     <div className="lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0">
+    
       <h1 className="text-5xl md:text-6xl font-bold">
         Content Customer Support
       </h1>
-      <p className="mt-4 text-xl md:text-2xl">
+      <p className="mt-4 text-xl md:text-2xl font-extrabold">
         Your Trusted Partner for Resolving Utility-Related Queries Efficiently
       </p>
       <div className="mt-8 flex justify-center lg:justify-start space-x-4">
@@ -131,15 +140,16 @@ function ContentConsumer() {
         </a>
       </div>
     </div>
+    <img src='/Housing-pop-up.jpg' alt='' className='mt-10 w-[450px]'/>
 
     {/* Image Section */}
-    <div className="lg:w-1/2 flex justify-center">
+    {/* <div className="lg:w-1/2 flex justify-center">
       <img
         src="/customer-support-illustration-concept_23152-154.avif"
         alt="Customer Support Illustration"
         className="w-full max-w-md lg:max-w-full h-auto rounded-lg shadow-lg"
       />
-    </div>
+    </div> */}
   </div>
 </header>
 
@@ -289,6 +299,20 @@ function ContentConsumer() {
       {/* Footer */}
       <footer className="bg-blue-600 text-white text-center py-4">
         <p>© 2024 Content Support Services. All Rights Reserved.</p>
+        <p className="font-bold mt-5">Call Now For Expert Support{" "}</p>
+
+<p className="">
+  <a
+    href="tel:+10865449042"
+    onClick={(e) => {
+      e.preventDefault();
+      window.location.href = "tel:+10865449042";
+    }}
+    className="text-green-200 hover:underline"
+  >
+    +108-654-49042
+  </a>
+</p>
       </footer>
     </div>
   );
